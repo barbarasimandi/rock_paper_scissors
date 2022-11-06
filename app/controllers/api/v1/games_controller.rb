@@ -5,14 +5,7 @@ module Api
         user_choice = user_choice_params.fetch(:user_choice, "no_choice_provided").to_sym
         opponent_choice = "rock".to_sym
 
-        result =
-          if rules[opponent_choice].include?(user_choice)
-            "#{user_choice}, vs #{opponent_choice}. Opponent wins!"
-          elsif rules[user_choice].include?(opponent_choice)
-            "#{user_choice}, vs #{opponent_choice}. User wins!"
-          else
-            "#{user_choice}, vs #{opponent_choice}. It's a tie!"
-          end
+        result = GameEvaluator.call(user_choice: user_choice, opponent_choice: opponent_choice)
 
         render json: result, status: 200
 
@@ -21,14 +14,6 @@ module Api
       end
 
       private
-
-      def rules
-        {
-          rock: [:scissors],
-          paper: [:rock],
-          scissors: [:paper]
-        }
-      end
 
       def user_choice_params
         params.permit(:user_choice)
