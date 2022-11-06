@@ -1,7 +1,12 @@
 require 'rails_helper'
+require 'rps_client'
 
 RSpec.describe "Api::V1::Games", type: :request do
   describe "GET /api/v1/play" do
+    before do
+      allow(RpsClient).to receive(:fetch_opponent_choice).and_return("rock")
+    end
+
     context "with user_choice param" do
       it "has http status 200" do
         get api_v1_play_path, params: { user_choice: "paper" }

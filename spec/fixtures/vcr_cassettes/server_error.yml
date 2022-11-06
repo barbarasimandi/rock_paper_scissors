@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://5eddt4q9dk.execute-api.us-east-1.amazonaws.com/rps-stage/throw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 5eddt4q9dk.execute-api.us-east-1.amazonaws.com
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Date:
+      - Sun, 06 Nov 2022 13:33:06 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '36'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 5293e56a-6bb5-4931-af5e-7763597a7df1
+      X-Amzn-Errortype:
+      - InternalServerErrorException
+      X-Amz-Apigw-Id:
+      - bLme8GMaIAMFvcA=
+    body:
+      encoding: UTF-8
+      string: '{"message": "Internal server error"}'
+  recorded_at: Sun, 06 Nov 2022 13:33:06 GMT
+recorded_with: VCR 6.1.0
