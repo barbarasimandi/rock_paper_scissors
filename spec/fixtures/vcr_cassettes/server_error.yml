@@ -21,7 +21,7 @@ http_interactions:
       message: Internal Server Error
     headers:
       Date:
-      - Sun, 06 Nov 2022 13:33:06 GMT
+      - Sun, 06 Nov 2022 13:46:13 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -29,13 +29,13 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 5293e56a-6bb5-4931-af5e-7763597a7df1
+      - 536cb65e-108b-4799-98a5-ad8676f4f451
       X-Amzn-Errortype:
       - InternalServerErrorException
       X-Amz-Apigw-Id:
-      - bLme8GMaIAMFvcA=
+      - bLoZ2GlCIAMFdDQ=
     body:
       encoding: UTF-8
       string: '{"message": "Internal server error"}'
-  recorded_at: Sun, 06 Nov 2022 13:33:06 GMT
+  recorded_at: Sun, 06 Nov 2022 13:46:13 GMT
 recorded_with: VCR 6.1.0

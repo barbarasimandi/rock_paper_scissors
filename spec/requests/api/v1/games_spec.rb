@@ -4,7 +4,15 @@ require 'rps_client'
 RSpec.describe "Api::V1::Games", type: :request do
   describe "GET /api/v1/play" do
     before do
-      allow(RpsClient).to receive(:fetch_opponent_choice).and_return("rock")
+      allow(RpsClient).to receive(:fetch_opponent_choice).and_return(opponent_choice)
+    end
+
+    let(:opponent_choice) do
+      {
+        statusCode: 200,
+        message: "Generated locally",
+        body: "rock"
+      }
     end
 
     context "with user_choice param" do
