@@ -1,4 +1,6 @@
 class GameEvaluator < ApplicationService
+  class UnknownWeaponError < StandardError; end
+
   attr_reader :user_choice, :opponent_choice
 
   RULES = {
@@ -13,6 +15,11 @@ class GameEvaluator < ApplicationService
   end
 
   def call
+    unless RULES.keys.include?(user_choice) && RULES.keys.include?(opponent_choice)
+      raise UnknownWeaponError,
+            "Unknown weapon. Please select from #{RULES.keys.join(', ')}.
+            \nReceived User choice: #{user_choice}, opponent choice: #{opponent_choice}."
+    end
     evaluate
   end
 

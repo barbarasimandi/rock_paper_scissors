@@ -26,5 +26,16 @@ RSpec.describe GameEvaluator do
         end
       end
     end
+
+    context "when spock" do
+      choices = {
+        user_choice: "spock",
+        opponent_choice: "rock"
+      }
+
+      it "raises exception" do
+        expect { described_class.call(choices) }.to raise_error(described_class::UnknownWeaponError)
+      end
+    end
   end
 end
