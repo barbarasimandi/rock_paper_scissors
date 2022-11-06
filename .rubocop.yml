@@ -1,0 +1,18 @@
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - bin/bundle
+    - db/schema.rb
+    - db/migrate/**
+Lint/MissingSuper:
+  Exclude:
+    - 'app/services/**/*'
+Style/StringLiterals:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/BlockLength:
+  IgnoredMethods: [ 'describe', 'context' ]
