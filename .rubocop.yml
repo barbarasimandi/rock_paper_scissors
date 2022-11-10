@@ -14,5 +14,9 @@ Style/Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
+Metrics/AbcSize:
+  Max: 19
 Metrics/BlockLength:
   IgnoredMethods: [ 'describe', 'context' ]
+Metrics/MethodLength:
+  Max: 15

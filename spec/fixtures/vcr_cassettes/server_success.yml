@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://private-17f6a4-curbrockpaperscissors.apiary-mock.com/rps-stage/throw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - private-17f6a4-curbrockpaperscissors.apiary-mock.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '45'
+      X-Apiary-Ratelimit-Limit:
+      - '120'
+      X-Apiary-Ratelimit-Remaining:
+      - '119'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT
+      Access-Control-Expose-Headers:
+      - Content-Type
+      Access-Control-Max-Age:
+      - '10'
+      X-Apiary-Transaction-Id:
+      - 6367baa42c8259007fa12c6f
+      Date:
+      - Sun, 06 Nov 2022 13:46:12 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "statusCode": 200,
+            "body": "rock"
+        }
+  recorded_at: Sun, 06 Nov 2022 13:46:12 GMT
+recorded_with: VCR 6.1.0
