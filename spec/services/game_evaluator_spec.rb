@@ -7,21 +7,21 @@ RSpec.describe GameEvaluator do
         context "when #{winner_choice}" do
           it "beats #{loser_choice}" do
             response = described_class.call(user_choice: winner_choice, opponent_choice: loser_choice)
-            expect(response).to eq("User choice: #{winner_choice}, Opponent choice: #{loser_choice}. User wins!")
+            expect(response[:results]).to eq("User choice: #{winner_choice}, Opponent choice: #{loser_choice}. User wins!")
           end
         end
 
         context "when #{winner_choice}" do
           it "ties #{winner_choice}" do
             response = described_class.call(user_choice: winner_choice, opponent_choice: winner_choice)
-            expect(response).to eq("User choice: #{winner_choice}, Opponent choice: #{winner_choice}. It's a tie!")
+            expect(response[:results]).to eq("User choice: #{winner_choice}, Opponent choice: #{winner_choice}. It's a tie!")
           end
         end
 
         context "when #{loser_choice}" do
           it "loses against #{winner_choice}" do
             response = described_class.call(user_choice: loser_choice, opponent_choice: winner_choice)
-            expect(response).to eq("User choice: #{loser_choice}, Opponent choice: #{winner_choice}. Opponent wins!")
+            expect(response[:results]).to eq("User choice: #{loser_choice}, Opponent choice: #{winner_choice}. Opponent wins!")
           end
         end
       end
